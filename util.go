@@ -67,10 +67,6 @@ func postForm(url string, params url.Values, response interface{}) error {
 		return err
 	}
 	defer request.Body.Close()
-	//
-	//byteData, _ := ioutil.ReadAll(request.Body)
-	//
-	//fmt.Printf("%s", byteData)
 
 	return json.NewDecoder(request.Body).Decode(response)
 }

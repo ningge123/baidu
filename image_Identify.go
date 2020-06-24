@@ -98,7 +98,7 @@ type RedwineIdentifyResponse struct {
 }
 
 // 动物识别
-func AnimalIdentify(token, image string, topNum, baikeNum string) (*AnimalIdentifyResponse, error) {
+func AnimalIdentify(token, image, topNum, baikeNum string) (*AnimalIdentifyResponse, error) {
 	api := baseURL + animalIdentify
 
 	urlToken, err := tokenApi(api, token)
